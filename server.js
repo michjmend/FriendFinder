@@ -1,11 +1,18 @@
 var express = require("express");
-var path = require("path");
+//express configuration
 var app = express();
 var PORT = process.env.PORT || 8080;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Determine the user's most compatible friend using the following as a guide:
-
+//router
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
+//listener
+app.listen(PORT, function() {
+  console.log("App listening on PORT: " + PORT);
+});
 // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
 // With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
 // Example:

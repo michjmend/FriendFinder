@@ -1,0 +1,24 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "package json",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michjmend/FriendFinder.git"
+  },
+  "author": "Michelle Mendieta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michjmend/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/michjmend/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "path": "^0.12.7"
+  }
+}
