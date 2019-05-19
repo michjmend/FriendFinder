@@ -9,14 +9,9 @@ module.exports = function(app) {
 	});
   // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 	app.post('/api/friends', function(req, res) {
-		// Capture the user input object
+		// set variables to make code more readable
 		var userInput = req.body;
-		// console.log('userInput = ' + JSON.stringify(userInput));
-
 		var userResponses = userInput.scores;
-		// console.log('userResponses = ' + userResponses);
-
-		// Compute best friend match
 		var matchName = '';
 		var matchImage = '';
 		var totalDifference = 10000; // Make the initial value big for comparison
