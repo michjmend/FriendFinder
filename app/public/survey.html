@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 <!-- header -->
 <header>
   <div class="jumbotron text-center">
-      <a href="/" class="brand-logo" id="logo"><i class="fas fa-users fa-3x"></i></a><h1 class="text-center">FriendFinder</h1>
+      <a href="/" class="brand-logo" id="logo"><i class="fas fa-users fa-3x"></i></a><h1 class="text-center">Find a new lunch buddy!</h1>
       <hr>
     <h2><i class="fas fa-list-ol"></i> SURVEY QUESTIONS</h2>
   </div>
@@ -180,7 +180,7 @@
 
 <!-- Survey Submit Button | MODAL -->
 <div class="container card-body">
-  <button id="findFriend" type="button" name="action" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="friendModal">SUBMIT <i class="fas fa-chevron-circle-right"></i></button>
+  <button id="findFriend" type="submit" name="action" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="friendModal">SUBMIT <i class="fas fa-chevron-circle-right"></i></button>
 </div>
 
 <!-- footer -->
@@ -192,18 +192,18 @@
 </footer>
 
 <!-- modal after submission of survey -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="title" aria-hidden="true">
+<div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="title" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalCenterTitle">And your new lunch buddy is ...</h3>
+        <h3 class="modal-title">And your new lunch buddy is ...</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <h5 id="friendMatch"></h5>
-        <img id="friendMatchImage" class="materialboxed" height="400px" width="auto" src="">
+        <img id="friendMatchImage" class="materialboxed" height="400px" width="auto">
       </div>
       <div class="modal-footer">
         <a href="/survey"><button type="button" class="btn btn-primary">Find another foodie!</button></a>
@@ -262,7 +262,7 @@
         $("#friendMatchImage").attr("src", data.matchImage);
 
         // Pop open the modal dialog
-          $('#modal1').modal('open');
+          $('#modalId').modal('open');
         });
   });
 </script>
