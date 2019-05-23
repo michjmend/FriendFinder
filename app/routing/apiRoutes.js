@@ -1,5 +1,4 @@
 // Your apiRoutes.js file should contain two routes:
-var path = require('path');
 var friends = require('../data/friends.js');
 
 module.exports = function(app) {
@@ -10,25 +9,34 @@ module.exports = function(app) {
   // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 	app.post('/api/friends', function(req, res) {
 		// set variables to make code more readable
-		var userInput = req.body;
-		var userResponses = userInput.scores;
-		var matchName = '';
-		var matchImage = '';
-		var totalDifference = 100000;
+		var user = req.body;
+		var userResponses = user.scores;
+		console.log(userResponses);
+		//the match closest to your score will be the lunch buddy with the closest minimun score difference
+		var lunchBuddy = 0;
+		var minScoreDiff = 40;
+
+		// parseInt for scores
+		for(var i = 0; i < userResponses.length; i++) {
+			userResponses[i] = parseInt(userResponses[i]);
+		}
+
 
 		for (var i = 0; i < friends.length; i++) {
-			var diff = 0;
-			for (var j = 0; j < userResponses.length; j++) {
-				diff += Math.abs(friends[i].scores[j] - userResponses[j]);
+			var totalDifference = 0;
+			for (var j = 0; j < friends[i].scores.length; j++) {
+				var diff = Math.abs(friends[i].scores[j] - userResponses[j]);
+				totalDifference += diff;
 			}
 			console.log(diff)
-			if (diff < totalDifference) {
-				totalDifference = diff;
-				matchName = friends[i].name;
-				matchImage = friends[i].photo;
+			if (totalDifference < minScoreDiff) {
+				lunchBuddy = i;
+				friendMatch = friends[i].name
+				friendMatchImage = friends[i].photo
+				minScoreDiff = totalDifference;
 			}
 		}
-		friends.push(userInput);
-		res.json({status: 'OK', matchName: matchName, matchImage: matchImage});
+		friends.push(user);
+		res.json(friends[lunchBuddy]);
 	});
 };
