@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FriendFinder - Home</title>
+  <link rel="stylesheet" href="./style.css">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -20,8 +21,9 @@
 <body>
   <!-- header -->
   <header>
-    <div class="jumbotron text-center">
-      <a href="/" class="brand-logo" id="logo"><i class="fas fa-users fa-3x"></i></a>
+    <div class="text-center">
+      <a href="/" class="brand-logo" id="logo"><img src="https://img.icons8.com/color/96/000000/food.png"><img
+          src="https://img.icons8.com/color/96/000000/friends--v2.png"></a>
       <h1 class="text-center">Find a new lunch buddy!</h1>
       <hr>
       <h2><i class="fas fa-list-ol"></i> SURVEY QUESTIONS</h2>
@@ -31,25 +33,27 @@
 
   <!-- questions header-->
   <div class="container-fluid">
-    <div class="container card-body text-center">
-      <div class="row">
-        <h3>About You <i class="far fa-smile"></i></h3>
-        <hr>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>
-            <h5>Name (Required)</h5>
-          </p>
-          <i class="fas fa-signature fa-lg"></i>
-          <input type="text" class="validate" placeholder="Your Name Here" id="nameInput">
+    <div class="container card text-center">
+      <div class="card-body">
+        <div class="row">
+          <h3>About You <img src="https://img.icons8.com/color/48/000000/happy--v2.png"></h3>
+          <hr>
         </div>
-        <div class="col-md-6">
-          <p>
-            <h5>Link to Photo Image (Required)</h5>
-          </p>
-          <i class="fas fa-portrait fa-lg"></i>
-          <input type="text" class="validate" placeholder="Photo Link Here" id="photoInput">
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              <h5>Name (Required)</h5>
+            </p>
+            <img src="https://img.icons8.com/color/48/000000/autograph.png">
+            <input type="text" class="validate" placeholder="Your Name Here" id="nameInput">
+          </div>
+          <div class="col-md-6">
+            <p>
+              <h5>Link to Photo Image (Required)</h5>
+            </p>
+            <img src="https://img.icons8.com/color/48/000000/add-link.png">
+            <input type="text" class="validate" placeholder="Photo Link Here" id="photoInput">
+          </div>
         </div>
       </div>
     </div>
@@ -57,7 +61,8 @@
 
   <!-- Survey Questions -->
   <div class="container">
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 1</h4>
       <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
       <select id="q1">
@@ -68,9 +73,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 2</h4>
       <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
       <select id="q2">
@@ -81,9 +88,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 3</h4>
       <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
       <select id="q3">
@@ -94,9 +103,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 4</h4>
       <h5>You rarely do something just out of sheer curiosity.</h5>
       <select id="q4">
@@ -107,9 +118,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 5</h4>
       <h5>People can rarely upset you.</h5>
       <select id="q5">
@@ -120,9 +133,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 6</h4>
       <h5>It is often difficult for you to relate to other people’s feelings.</h5>
       <select id="q6">
@@ -133,9 +148,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 7</h4>
       <h5>In a discussion, truth should be more important than people’s sensitivities.</h5>
       <select id="q7">
@@ -146,9 +163,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 8</h4>
       <h5>You rarely get carried away by fantasies and ideas.</h5>
       <select id="q8">
@@ -159,9 +178,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 9</h4>
       <h5>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
       </h5>
@@ -173,9 +194,11 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
+      </div>
+    </div>
 
-    <p class="card">
+    <div class="card">
+      <div class="card-body">
       <h4>QUESTION 10</h4>
       <h5>You feel more energetic after spending time with a group of people.</h5>
       <select id="q10">
@@ -186,23 +209,24 @@
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    </p>
-
+      </div>
   </div>
 
   <!-- Survey Submit Button | MODAL -->
   <div class="container card-body">
-    <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">SUBMIT <i
-        class="fas fa-chevron-circle-right"></i></button>
+    <button id="submit" type="submit" class="btn btn-info btn-lg btn-block">SUBMIT <img src="https://img.icons8.com/color/48/000000/enter-2.png"></button>
   </div>
 
   <!-- footer -->
-  <footer class="jumbotron text-center">
-    <h4>LINKS:</h4>
-    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/michjmend/FriendFinder.git">GitHub
-        Repo</a></p>
-    <hr>
-    <p>Copyright &copy; michJmend 2019</p>
+  <footer class="container-fluid text-center">
+    <div class="container LINKS">
+        <h4>LINKS:</h4>
+        <p class="card-body">
+          <a class="btn btn-info" href="/api/friends"><img src="https://img.icons8.com/color/48/000000/crowd.png"> API Friends List</a> |
+          <a class="btn btn-info" href="https://github.com/michjmend/FriendFinder.git"><img src="https://img.icons8.com/color/48/000000/github--v1.png"> GitHub Repo</a>
+        </p>
+    </div>
+    <p class="copyright">Copyright &copy; michjmend 2019</p>
   </footer>
 
   <!-- modal after submission of survey -->
@@ -210,11 +234,11 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title">And your new lunch buddy is ...</h3>
+          <h3 class="modal-title"><img src="https://img.icons8.com/color/48/000000/food.png"><img src="https://img.icons8.com/color/48/000000/friends--v2.png">And your new lunch buddy is ...</h3>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
-          <h5 id="friendMatch"></h5>
+          <h5 id="friendMatch">!!</h5>
           <img id="friendMatchImage" height="250px" width="auto" src="#">
         </div>
         <div class="modal-footer">
@@ -272,3 +296,7 @@
       }
     });
   </script>
+
+</body>
+
+</html>

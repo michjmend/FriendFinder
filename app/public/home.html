@@ -13,30 +13,35 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
   <!-- header -->
-  <header class="jumbotron text-center">
-    <a href="/" class="brand-logo" id="logo"><i class="fas fa-users fa-3x"></i></a>
+  <header class="text-center">
+    <a href="/" class="brand-logo" id="logo"><img src="https://img.icons8.com/color/96/000000/food.png"><img src="https://img.icons8.com/color/96/000000/friends--v2.png"></a>
     <h1 class="text-center">Find a new lunch buddy!</h1>
   </header>
 
   <!-- button to survey -->
-  <div class="container card-body text-center">
-    <h2><i class="fas fa-list-ol"></i> Answer a few basic questions.</h2>
-    <h2><i class="fas fa-user-plus"></i> Then find the friend with the greatest compatibility!</h2>
-    <a href="/survey"><button class="btn btn-lg btn-primary">CLICK HERE FOR SURVEY <i
-          class="fas fa-chevron-circle-right"></i></button></a>
+  <div class="container card">
+    <div class="card-body text-center">
+      <h2><img src="https://img.icons8.com/color/48/000000/questions.png"> Answer a few basic questions.</h2>
+      <h2><img src="https://img.icons8.com/color/48/000000/add-user-group-woman-man.png"> Then find a lunch buddy with the greatest compatibility!</h2>
+      <a href="/survey"><button class="btn btn-lg btn-info">CLICK HERE FOR SURVEY <img src="https://img.icons8.com/color/48/000000/survey.png"></button></a>
+    </div>
   </div>
 
   <!-- footer -->
-  <footer class="jumbotron text-center">
-    <h4>LINKS:</h4>
-    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/michjmend/FriendFinder.git">GitHub
-        Repo</a></p>
-    <hr>
-    <p>Copyright &copy;</p>
+  <footer class="text-center">
+    <div class="container LINKS">
+        <h4>LINKS:</h4>
+        <p class="card-body">
+          <a class="btn btn-info" href="/api/friends"><img src="https://img.icons8.com/color/48/000000/crowd.png"> API Friends List</a> |
+          <a class="btn btn-info" href="https://github.com/michjmend/FriendFinder.git"><img src="https://img.icons8.com/color/48/000000/github--v1.png"> GitHub Repo</a>
+        </p>
+    </div>
+    <p class="copyright">Copyright &copy; michjmend 2019</p>
   </footer>
 
 </body>
